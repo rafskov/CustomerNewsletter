@@ -36,7 +36,7 @@ Every change follows this numbered workflow. No exceptions.
 | 2 | editorial-analyst | Editorial intelligence mining + corrections |
 | 3 | skill-builder | Create and validate new skills |
 
-## Skills (17)
+## Skills (18)
 
 | # | Skill | Purpose |
 |---|---|---|
@@ -57,6 +57,7 @@ Every change follows this numbered workflow. No exceptions.
 | 15 | curator-notes | Phase 1.5: Process curator brain dump |
 | 16 | session-log-manager | Archive and health-check session logs |
 | 17 | deprecation-consolidation | Phase 4.5: Consolidate deprecation notices |
+| 18 | use-case-filter | Phase 5b: Extract use-case-specific customer briefings |
 
 Skills are at `.github/skills/<name>/SKILL.md`.
 

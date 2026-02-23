@@ -146,6 +146,15 @@ newsletter-orchestrated: ## Controlled phase-by-phase run with explicit agent de
 	@if [ -z "$(START)" ] || [ -z "$(END)" ]; then echo "Usage: make newsletter-orchestrated START=YYYY-MM-DD END=YYYY-MM-DD [MODEL=claude-opus-4.6] [BENCHMARK_MODE=feb2026_consistency] [NO_REUSE=1]"; exit 1; fi
 	@MODEL="$${MODEL:-$(MODEL)}" BENCHMARK_MODE="$${BENCHMARK_MODE:-$(BENCHMARK_MODE)}" NO_REUSE="$${NO_REUSE:-$(NO_REUSE)}" bash tools/run_newsletter_orchestrated.sh $(START) $(END)
 
+briefings: ## Generate use-case briefings from assembled newsletter (NEWSLETTER= optional, defaults to latest in output/)
+	@NEWSLETTER="$${NEWSLETTER:-$$(ls -t output/*_newsletter.md 2>/dev/null | head -1)}"; \
+	if [ -z "$$NEWSLETTER" ]; then echo "Error: No newsletter found in output/. Run 'make newsletter' first or set NEWSLETTER=path."; exit 1; fi; \
+	echo "Generating use-case briefings from $$NEWSLETTER..."; \
+	mkdir -p output/briefings; \
+	echo "Run Phase 5b (use-case-filter) via Copilot agent with:"; \
+	echo "  copilot -p \"Run Phase 5b use-case-filter on $$NEWSLETTER\""; \
+	echo "Or use the customer_newsletter agent in VS Code."
+
 test-archive: ## Run archive_workspace.sh test suite
 	@bash tools/test_archive_workspace.sh
 

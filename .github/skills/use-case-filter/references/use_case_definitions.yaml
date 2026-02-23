@@ -1,0 +1,168 @@
+version: 1
+as_of: "2026-02-23"
+
+use_cases:
+
+  - id: legacy_migration
+    name: "Legacy Codebase Migration"
+    description: "For customers modernizing legacy systems, reducing technical debt, or migrating between frameworks/languages"
+    audience:
+      - "Engineering Managers leading modernization initiatives"
+      - "Platform teams planning migration strategies"
+      - "Architects evaluating AI-assisted migration tooling"
+    signals:
+      keywords:
+        - "migration"
+        - "moderniz"
+        - "legacy"
+        - "refactor"
+        - "technical debt"
+        - "codebase"
+        - "code review"
+        - "code editing tools"
+        - "app mod"
+      features:
+        - "agent mode"
+        - "coding agent"
+        - "plan mode"
+        - "subagent"
+        - "code review"
+        - "agentic workflow"
+        - "spec-kit"
+        - "spec-driven"
+        - "autopilot"
+      categories:
+        - "Copilot"
+        - "Resources and Best Practices"
+      events:
+        - "moderniz"
+        - "migration"
+        - "app mod"
+    framing: "These updates directly support large-scale codebase modernization efforts. AI-assisted agents can now plan, execute, and review migration tasks with increasing autonomy, while new tooling supports structured, spec-driven approaches to reducing technical debt."
+
+  - id: security_compliance
+    name: "Security & Compliance"
+    description: "For customers focused on security posture, compliance requirements, and governance controls"
+    audience:
+      - "CISOs and Security Leads"
+      - "Compliance Officers"
+      - "IT Leadership in regulated industries"
+    signals:
+      keywords:
+        - "security"
+        - "compliance"
+        - "governance"
+        - "secret scanning"
+        - "GHAS"
+        - "vulnerability"
+        - "supply chain"
+        - "attestation"
+        - "SLSA"
+        - "data residency"
+        - "DPA"
+        - "indemnity"
+      features:
+        - "secret scanning"
+        - "code scanning"
+        - "Dependabot"
+        - "GHAS"
+        - "data residency"
+        - "BYOK"
+        - "sandbox"
+      categories:
+        - "Enterprise and Security Updates"
+    framing: "These updates strengthen your organization's security posture and compliance capabilities. From expanded secret scanning to supply chain attestations and data residency options, GitHub continues to build enterprise-grade security controls."
+
+  - id: developer_productivity
+    name: "Developer Productivity & Adoption"
+    description: "For customers focused on accelerating developer workflows and driving Copilot adoption"
+    audience:
+      - "Developer Experience teams"
+      - "Engineering Managers measuring productivity"
+      - "Platform Engineering leads"
+    signals:
+      keywords:
+        - "productivity"
+        - "adoption"
+        - "metrics"
+        - "usage"
+        - "dashboard"
+        - "training"
+        - "enablement"
+        - "best practice"
+        - "onboard"
+      features:
+        - "code completion"
+        - "auto model selection"
+        - "Copilot metrics"
+        - "agent skills"
+        - "memory"
+        - "MCP"
+        - "custom instructions"
+      categories:
+        - "Copilot"
+        - "Resources and Best Practices"
+    framing: "These updates help your teams get more value from Copilot. From improved code completion and agent capabilities to better metrics dashboards and training resources, GitHub is making it easier to drive adoption and measure impact."
+
+  - id: platform_engineering
+    name: "Platform Engineering & DevOps"
+    description: "For customers building internal developer platforms, CI/CD pipelines, and infrastructure automation"
+    audience:
+      - "Platform Engineering teams"
+      - "DevOps Leads"
+      - "Infrastructure teams"
+    signals:
+      keywords:
+        - "Actions"
+        - "CI/CD"
+        - "pipeline"
+        - "runner"
+        - "workflow"
+        - "automation"
+        - "infrastructure"
+        - "SDK"
+        - "API"
+        - "MCP"
+      features:
+        - "GitHub Actions"
+        - "agentic workflows"
+        - "gh-aw"
+        - "Copilot SDK"
+        - "MCP"
+        - "BYOK"
+        - "background agents"
+      categories:
+        - "GitHub Platform Updates"
+        - "Enterprise and Security Updates"
+    framing: "These updates are relevant for teams building and operating internal developer platforms. From new automation frameworks to API enhancements and agent orchestration capabilities, GitHub is expanding the platform engineering toolkit."
+
+  - id: enterprise_rollout
+    name: "Enterprise Rollout & Governance"
+    description: "For customers planning or scaling GitHub/Copilot enterprise deployments"
+    audience:
+      - "IT Leadership"
+      - "Enterprise Architects"
+      - "GitHub Admins"
+    signals:
+      keywords:
+        - "enterprise"
+        - "governance"
+        - "admin"
+        - "policy"
+        - "budget"
+        - "billing"
+        - "license"
+        - "deprecation"
+        - "migration notice"
+        - "rollout"
+        - "organization"
+      features:
+        - "enterprise teams"
+        - "custom properties"
+        - "budgets"
+        - "cost center"
+        - "GHEC"
+        - "data residency"
+      categories:
+        - "Enterprise and Security Updates"
+    framing: "These updates affect how you manage and govern your GitHub Enterprise deployment. Stay ahead of deprecations, leverage new admin controls, and plan for upcoming changes to billing, policies, and platform capabilities."
