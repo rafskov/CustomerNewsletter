@@ -28,5 +28,6 @@ nav:
       - Feb 2026 System Report: reports/newsletter_system_report_2026-02.md
   - Briefings:
       - Overview: briefings/index.md
-      - Legacy Migration: briefings/2026-02_legacy_migration.md
+      - "Legacy Migration (Full Feb)": briefings/2026-02_full_legacy_migration.md
+      - "Legacy Migration (Dec-Feb 13)": briefings/2026-02_legacy_migration.md
   - Legacy: legacy/README.md
