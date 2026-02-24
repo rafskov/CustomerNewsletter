@@ -1,7 +1,7 @@
 site_name: CustomerNewsletter
 site_description: Open-source Copilot-powered newsletter generation system
-repo_url: https://github.com/briancl2/CustomerNewsletter
-site_url: https://briancl2.github.io/CustomerNewsletter/
+repo_url: https://github.com/rafskov/CustomerNewsletter
+site_url: https://rafskov.github.io/CustomerNewsletter/
 
 theme:
   name: material
@@ -26,4 +26,7 @@ nav:
   - Architecture: architecture.md
   - Reports:
       - Feb 2026 System Report: reports/newsletter_system_report_2026-02.md
+  - Briefings:
+      - Overview: briefings/index.md
+      - Legacy Migration: briefings/2026-02_legacy_migration.md
   - Legacy: legacy/README.md
