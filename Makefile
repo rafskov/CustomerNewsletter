@@ -1,4 +1,4 @@
-.PHONY: help validate-structure validate-skill validate-all-skills
+.PHONY: help validate-structure validate-skill validate-all-skills territory-intel
 
 help: ## Show available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -154,6 +154,19 @@ briefings: ## Generate use-case briefings from assembled newsletter (NEWSLETTER=
 	echo "Run Phase 5b (use-case-filter) via Copilot agent with:"; \
 	echo "  copilot -p \"Run Phase 5b use-case-filter on $$NEWSLETTER\""; \
 	echo "Or use the customer_newsletter agent in VS Code."
+
+territory-intel: ## Generate territory intelligence briefing from CSV exports
+	@if [ -z "$$PROSPECTS" ] && [ -z "$$BOOK" ]; then \
+		echo "Usage: make territory-intel PROSPECTS=path BOOK=path [COPILOT_REV=path] [ACTIONS_REV=path] [PR_DATA=path]"; \
+		exit 1; \
+	fi; \
+	python3 tools/territory_intel.py \
+		$${PROSPECTS:+--prospects "$$PROSPECTS"} \
+		$${BOOK:+--book "$$BOOK"} \
+		$${COPILOT_REV:+--copilot-rev "$$COPILOT_REV"} \
+		$${ACTIONS_REV:+--actions-rev "$$ACTIONS_REV"} \
+		$${PR_DATA:+--pr-data "$$PR_DATA"} \
+		--output-dir output/
 
 test-archive: ## Run archive_workspace.sh test suite
 	@bash tools/test_archive_workspace.sh
