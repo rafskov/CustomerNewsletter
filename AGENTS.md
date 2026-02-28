@@ -58,7 +58,6 @@ Every change follows this numbered workflow. No exceptions.
 | 16 | session-log-manager | Archive and health-check session logs |
 | 17 | deprecation-consolidation | Phase 4.5: Consolidate deprecation notices |
 | 18 | use-case-filter | Phase 5b: Extract use-case-specific customer briefings |
-| 19 | territory-intelligence | Phase 6: Territory intel briefings from pipeline data |
 
 Skills are at `.github/skills/<name>/SKILL.md`.
 
